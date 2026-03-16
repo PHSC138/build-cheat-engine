@@ -77,10 +77,10 @@ jobs:
     - run: msbuild "Cheat Engine/DotNetInvasiveDataCollector/DotNetInvasiveDataCollector.sln" /p:Configuration=Release
       continue-on-error: true
 
-    - run: msbuild "Cheat Engine/tcclib/win32/tcc/tcc.sln" /p:Configuration="Output to 32 (Release)" /p:Platform=Win32 /p:PlatformToolset=v143
-    - run: msbuild "Cheat Engine/tcclib/win32/tcc/tcc.sln" /p:Configuration="Output to 32 (Release)" /p:Platform=x64 /p:PlatformToolset=v143
-    - run: msbuild "Cheat Engine/tcclib/win32/tcc/tcc.sln" /p:Configuration="Output to 64 (Release)" /p:Platform=Win32 /p:PlatformToolset=v143
-    - run: msbuild "Cheat Engine/tcclib/win32/tcc/tcc.sln" /p:Configuration="Output to 64 (Release)" /p:Platform=x64 /p:PlatformToolset=v143
+    - run: msbuild "Cheat Engine/tcclib/win32/tcc/tcc.sln" /p:Configuration="Output to 32 (Release)" /p:Platform=Win32 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0
+    - run: msbuild "Cheat Engine/tcclib/win32/tcc/tcc.sln" /p:Configuration="Output to 32 (Release)" /p:Platform=x64 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0
+    - run: msbuild "Cheat Engine/tcclib/win32/tcc/tcc.sln" /p:Configuration="Output to 64 (Release)" /p:Platform=Win32 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0
+    - run: msbuild "Cheat Engine/tcclib/win32/tcc/tcc.sln" /p:Configuration="Output to 64 (Release)" /p:Platform=x64 /p:PlatformToolset=v143 /p:WindowsTargetPlatformVersion=10.0
 
     - run: 7z a CE.7z ".\Cheat Engine\bin\*"
 
