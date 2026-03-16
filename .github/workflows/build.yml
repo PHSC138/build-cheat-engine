@@ -17,6 +17,8 @@ jobs:
       with:
         lazarus-version: "2.2.2"
 
+    - uses: microsoft/setup-msbuild@v2
+
 #     - run: |
 #         if (-not (Test-Path lazarus-2.2.0-fpc-3.2.2-win64.exe)) {
 #             curl.exe -LO https://udomain.dl.sourceforge.net/project/lazarus/Lazarus%20Windows%2064%20bits/Lazarus%202.2.0/lazarus-2.2.0-fpc-3.2.2-win64.exe
