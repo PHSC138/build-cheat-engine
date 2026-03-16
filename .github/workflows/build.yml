@@ -53,6 +53,10 @@ jobs:
     - run: msbuild "Cheat Engine/Java/CEJVMTI/CEJVMTI.sln" /p:Configuration=Release /p:Platform=Win32
     - run: msbuild "Cheat Engine/Java/CEJVMTI/CEJVMTI.sln" /p:Configuration=Release /p:Platform=x64
 
+    - run: msbuild "Cheat Engine/DotNetCompiler/CSCompiler/CSCompiler.sln" /p:Configuration=Release
+
+    - run: msbuild "Cheat Engine/DotNetInvasiveDataCollector/DotNetInvasiveDataCollector.sln" /p:Configuration=Release
+
     - run: 7z a CE.7z ".\Cheat Engine\bin\*"
 
     - uses: actions/upload-artifact@master
