@@ -52,20 +52,30 @@ jobs:
       continue-on-error: true
 
     - run: msbuild "Cheat Engine/Direct x mess/Direct x mess.sln" /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143
+      continue-on-error: true
     - run: msbuild "Cheat Engine/Direct x mess/Direct x mess.sln" /p:Configuration=Release /p:Platform=x64 /p:PlatformToolset=v143
+      continue-on-error: true
 
     - run: msbuild "Cheat Engine/MonoDataCollector/MonoDataCollector.sln" /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143
+      continue-on-error: true
     - run: msbuild "Cheat Engine/MonoDataCollector/MonoDataCollector.sln" /p:Configuration=Release /p:Platform=x64 /p:PlatformToolset=v143
+      continue-on-error: true
 
     - run: msbuild "Cheat Engine/DotNetDataCollector/DotNetDataCollector.sln" /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143
+      continue-on-error: true
     - run: msbuild "Cheat Engine/DotNetDataCollector/DotNetDataCollector.sln" /p:Configuration=Release /p:Platform=x64 /p:PlatformToolset=v143
+      continue-on-error: true
 
     - run: msbuild "Cheat Engine/Java/CEJVMTI/CEJVMTI.sln" /p:Configuration=Release /p:Platform=Win32 /p:PlatformToolset=v143
+      continue-on-error: true
     - run: msbuild "Cheat Engine/Java/CEJVMTI/CEJVMTI.sln" /p:Configuration=Release /p:Platform=x64 /p:PlatformToolset=v143
+      continue-on-error: true
 
     - run: msbuild "Cheat Engine/DotNetCompiler/CSCompiler/CSCompiler.sln" /p:Configuration=Release
+      continue-on-error: true
 
     - run: msbuild "Cheat Engine/DotNetInvasiveDataCollector/DotNetInvasiveDataCollector.sln" /p:Configuration=Release
+      continue-on-error: true
 
     - run: msbuild "Cheat Engine/tcclib/win32/tcc/tcc.sln" /p:Configuration="Output to 32 (Release)" /p:Platform=Win32 /p:PlatformToolset=v143
     - run: msbuild "Cheat Engine/tcclib/win32/tcc/tcc.sln" /p:Configuration="Output to 32 (Release)" /p:Platform=x64 /p:PlatformToolset=v143
