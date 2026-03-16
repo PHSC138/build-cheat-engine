@@ -35,6 +35,12 @@ jobs:
 
     - run: lazbuild -B "Cheat Engine/VEHDebug/vehdebug.lpi" --cpu=x86_64 --build-mode="release 64"
 
+    - run: lazbuild -B "Cheat Engine/speedhack/speedhack.lpi" --cpu=i386 --build-mode="32-bit"
+
+    - run: lazbuild -B "Cheat Engine/luaclient/luaclient.lpi" --cpu=i386 --build-mode="Release 32"
+
+    - run: lazbuild -B "Cheat Engine/VEHDebug/vehdebug.lpi" --cpu=i386 --build-mode="release 32"
+
     - run: 7z a CE.7z ".\Cheat Engine\bin\*"
 
     - uses: actions/upload-artifact@master
