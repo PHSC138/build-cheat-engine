@@ -41,6 +41,18 @@ jobs:
 
     - run: lazbuild -B "Cheat Engine/VEHDebug/vehdebug.lpi" --cpu=i386 --build-mode="release 32"
 
+    - run: msbuild "Cheat Engine/Direct x mess/Direct x mess.sln" /p:Configuration=Release /p:Platform=Win32
+    - run: msbuild "Cheat Engine/Direct x mess/Direct x mess.sln" /p:Configuration=Release /p:Platform=x64
+
+    - run: msbuild "Cheat Engine/MonoDataCollector/MonoDataCollector.sln" /p:Configuration=Release /p:Platform=Win32
+    - run: msbuild "Cheat Engine/MonoDataCollector/MonoDataCollector.sln" /p:Configuration=Release /p:Platform=x64
+
+    - run: msbuild "Cheat Engine/DotNetDataCollector/DotNetDataCollector.sln" /p:Configuration=Release /p:Platform=Win32
+    - run: msbuild "Cheat Engine/DotNetDataCollector/DotNetDataCollector.sln" /p:Configuration=Release /p:Platform=x64
+
+    - run: msbuild "Cheat Engine/Java/CEJVMTI/CEJVMTI.sln" /p:Configuration=Release /p:Platform=Win32
+    - run: msbuild "Cheat Engine/Java/CEJVMTI/CEJVMTI.sln" /p:Configuration=Release /p:Platform=x64
+
     - run: 7z a CE.7z ".\Cheat Engine\bin\*"
 
     - uses: actions/upload-artifact@master
